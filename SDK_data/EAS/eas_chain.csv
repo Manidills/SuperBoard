@@ -1,0 +1,8 @@
+Chain,attestation_count,revoked_count,recipient_count,attester_count
+Scroll,1.440051e+06,18,445686,191829
+Base,588529,76040,369674,3537
+Optimism,414188,38481,183736,11223
+Linea,133372,5,103068,96
+Arbitrum,34947,240,12959,258
+Polygon,890,12,751,25
+Ethereum,216,1,63,88
