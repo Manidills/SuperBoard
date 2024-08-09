@@ -1,6 +1,7 @@
-altair==5.3.0
+altair
 pandas
 pyvis==0.3.2
-Requests==2.32.3
-streamlit==1.36.0
+Requests
+streamlit
 numpy
+pytz
