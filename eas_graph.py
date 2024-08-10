@@ -4,6 +4,7 @@ from pyvis.network import Network
 import tempfile
 import pandas as pd
 import g4f
+from streamlit.components.v1 import html
 
 
 def chat_bot(prompt):
@@ -455,7 +456,7 @@ def eas_graph():
             data = fetch_offchain_revocations(order_by, take)
 
             if data:
-                #st.dataframe(pd.DataFrame(data))
+                st.dataframe(pd.DataFrame(data))
                 graph_html = create_offchain_revocations_network_graph(data)
                 if graph_html:
                     st.components.v1.html(graph_html, height=900)
