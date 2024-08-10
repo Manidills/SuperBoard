@@ -2,6 +2,9 @@
 
 **SuperBoard** is a cutting-edge analytics platform designed to showcase the power of our custom-built [Blockscout Python SDK](https://github.com/kbm9696/BlockScout-SDK/tree/main). This SDK was specifically developed by us for this project, enabling developers to create comprehensive health dashboards and protocol-specific analytics for superchains like Optimism, Blast, and Base, as well as primary chains like Polygon. The SDK is continuously evolving to support an ever-expanding range of blockchains, making it an invaluable tool for the superchain ecosystem.
 
+Explore the Blockscout Python SDK on GitHub:  
+# [Blockscout Python SDK](https://github.com/kbm9696/BlockScout-SDK/tree/main)
+
 ## Features
 
 ### Superchain (Optimism)
