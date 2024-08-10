@@ -19,3 +19,4 @@ yfinance==0.2.40
 pyvis
 torch
 g4f
+curl-cffi
