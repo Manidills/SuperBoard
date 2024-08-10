@@ -1,6 +1,26 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import g4f
+
+
+
+def chat_bot(prompt):
+    response = g4f.ChatCompletion.create(
+        # model="gpt-3.5-turbo",
+        model=g4f.models.default,
+        messages=[{"role": "user", "content": prompt}],
+        stream=True,
+    )
+
+    return response
+
+
+@st.cache_resource
+def generate_summary(df,category):
+    csv_data_str = df.to_string(index=False)
+    prompt = f"Here Superchain & Optimism Stack {category} data\n{csv_data_str}\ngive some short summary insights about the data in 6 sentences"
+    st.write(chat_bot(prompt))
 
 
 def home():
@@ -35,6 +55,9 @@ def home():
     st.dataframe(pd.read_csv("SDK_data/Gas_per_Txn_Superchain.csv"), width=1200)
 
     st.markdown("##")
+
+    generate_summary(df,'transactions')
+    
 
     st.markdown("## Addresses : New addresses, Active addresses")
     st.markdown("##")
@@ -261,6 +284,7 @@ def home():
         ),
         use_container_width=True
     )
+    generate_summary(df, 'nft mints')
 
     st.markdown("##")
     st.markdown("## Contracts")

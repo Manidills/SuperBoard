@@ -3,6 +3,25 @@ import requests
 from pyvis.network import Network
 import tempfile
 import pandas as pd
+import g4f
+
+
+def chat_bot(prompt):
+    response = g4f.ChatCompletion.create(
+        # model="gpt-3.5-turbo",
+        model=g4f.models.default,
+        messages=[{"role": "user", "content": prompt}],
+        stream=True,
+    )
+
+    return response
+
+
+@st.cache_resource
+def generate_summary(df):
+    csv_data_str = df.to_string(index=False)
+    prompt = f"Here EAS protocol transactions data\n{csv_data_str}\ngive some short summary insights about the data in 6 sentences and there connections in points"
+    st.write(chat_bot(prompt))
 
 
 def fetch_data(order_by, take):
@@ -399,9 +418,12 @@ def eas_graph():
             # Only proceed if data is available
             if st.session_state['data']:
                 st.dataframe(pd.DataFrame(st.session_state['data']))
+                st.markdown("##")
                 graph_html = create_attestations_network_graph(st.session_state['data'])
                 if graph_html:
                     st.components.v1.html(graph_html, height=900)
+
+                generate_summary(pd.DataFrame(st.session_state['data']))
             
     elif option == 'schemaNames':
 
@@ -419,6 +441,9 @@ def eas_graph():
                 graph_html = create_schema_names_network_graph(data)
                 if graph_html:
                     st.components.v1.html(graph_html, height=900)
+
+                st.markdown("##")
+                generate_summary(pd.DataFrame(data))
     
     elif option == 'offchainRevocations':
         order_by_options = ["timestamp", "uid", "txid", "id", "from"]
@@ -434,6 +459,9 @@ def eas_graph():
                 graph_html = create_offchain_revocations_network_graph(data)
                 if graph_html:
                     st.components.v1.html(graph_html, height=900)
+
+                st.markdown("##")
+                generate_summary(pd.DataFrame(data))
 
     elif option == 'Timestamps':
         order_by_options = ["timestamp", "time"]

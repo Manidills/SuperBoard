@@ -3,8 +3,24 @@ import pandas as pd
 import altair as alt
 
 from eas_graph import eas_graph
+import g4f
+
+def chat_bot(prompt):
+    response = g4f.ChatCompletion.create(
+        # model="gpt-3.5-turbo",
+        model=g4f.models.default,
+        messages=[{"role": "user", "content": prompt}],
+        stream=True,
+    )
+
+    return response
 
 
+@st.cache_resource
+def generate_summary(df):
+    csv_data_str = df.to_string(index=False)
+    prompt = f"Here EAS protocol data\n{csv_data_str}\ngive some short summary insights about the data in 6 sentences"
+    st.write(chat_bot(prompt))
 
 def eas():
     st.markdown("##")
@@ -142,6 +158,8 @@ def eas():
             )
             st.data_editor(pd.read_csv('SDK_data/EAS/schema_stats.csv'))
 
+        generate_summary(df)
+
         st.markdown("##")
         st.data_editor(pd.read_csv('SDK_data/EAS/top_100_eas.csv'))
         st.markdown("##")
@@ -169,6 +187,8 @@ def eas():
 
         st.markdown("##")
         st.data_editor(pd.read_csv('SDK_data/EAS/optimisim_distribution_of_att.csv'), width=1200)
+
+        generate_summary(pd.read_csv('SDK_data/EAS/optimisim_distribution_of_att.csv'))
 
         st.markdown("##")
         st.data_editor(pd.read_csv('SDK_data/EAS/top_10_op.csv'), width=1200)
@@ -224,6 +244,8 @@ def eas():
                 ),
                 use_container_width=True
             )
+        
+        generate_summary(df)
 
 
         st.markdown("##")

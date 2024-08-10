@@ -18,3 +18,4 @@ ydata_profiling==4.8.3
 yfinance==0.2.40
 pyvis
 torch
+g4f
