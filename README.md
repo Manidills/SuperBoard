@@ -9,7 +9,7 @@
 
 ## Features
 
-### Superchain (Optimism)
+### Superchain (Op Stack)
 
 SuperBoard is engineered to support superchains, with a focus on Optimism, offering an extensive range of metrics that are crucial for understanding and optimizing superchain performance. The platform supports:
 
