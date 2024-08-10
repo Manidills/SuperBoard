@@ -39,8 +39,8 @@ The **Blockscout Python SDK** is the backbone of SuperBoard. It was meticulously
 - **Comprehensive Tooling**: It provides a suite of tools that are essential for superchain analytics, from data fetching to complex visualization, making it a must-have for developers working on blockchain projects.
 - **Accessibility**: By bringing Python developers into the Web3 space, the SDK makes blockchain data more accessible and understandable, empowering even those with limited blockchain experience to contribute to the ecosystem.
 
-Explore the Blockscout Python SDK on GitHub:  
-# (https://github.com/kbm9696/BlockScout-SDK/tree/main)
+Explore our Blockscout Python SDK on GitHub:  
+# Blockscout python SDK (https://github.com/kbm9696/BlockScout-SDK/tree/main)
 
 ### EAS Protocol Analytics
 
