@@ -5,6 +5,7 @@
 **Explore our Blockscout Python SDK on GitHub:**
 
 # [Blockscout Python SDK](https://github.com/kbm9696/BlockScout-SDK/tree/main)
+# https://pypi.org/project/BlockScoutSDK/1.0.0/
 
 ## Features
 
