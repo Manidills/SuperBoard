@@ -4,8 +4,8 @@
 
 **Explore our Blockscout Python SDK on GitHub:**
 
-# [Blockscout Python SDK](https://github.com/kbm9696/BlockScout-SDK/tree/main)
-### https://pypi.org/project/BlockScoutSDK/1.0.0/
+# [Blockscout Python SDK](https://github.com/kbm9696/BlockScout-SDK/tree/main)      https://pypi.org/project/BlockScoutSDK/1.0.0/
+
 
 ## Features
 
@@ -41,7 +41,7 @@ The **Blockscout Python SDK** is the backbone of SuperBoard. It was meticulously
 - **Accessibility**: By bringing Python developers into the Web3 space, the SDK makes blockchain data more accessible and understandable, empowering even those with limited blockchain experience to contribute to the ecosystem.
 
 Explore our Blockscout Python SDK on GitHub:  
-## (https://github.com/kbm9696/BlockScout-SDK/tree/main)
+### (https://github.com/kbm9696/BlockScout-SDK/tree/main)
 
 ### EAS Protocol Analytics
 
