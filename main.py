@@ -23,7 +23,7 @@ st.sidebar.title("Superhack Health Dashboard")
 actions = {
     "Home": ("🏠", page),
     "Analytics": ("📊", home),
-    "L2 Protocols": ("🔗", eas),
+    "Protocols": ("🔗", eas),
     # "Bridge Visualization": ("🌉", Bridge),
     # "Contracts": ("📜", explorer)
 }
