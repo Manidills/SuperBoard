@@ -29,11 +29,11 @@ def home():
     a,b,c = st.columns([2,2,2])
 
     with a:
-        st.metric("Total Transactions (Layer3 OP Quests), '17,666,559' ")
+        st.metric("Total Transactions (Layer3 OP Quests)", '17,666,559')
     with b:
-        st.metric("Total Users (Layer3 OP Quests), '683,754' ")
+        st.metric("Total Users (Layer3 OP Quests)", '683,754')
     with c:
-        st.metric("Total Transaction Fees (Layer3 OP Quests), '$2,098,564' ")
+        st.metric("Total Transaction Fees (Layer3 OP Quests)", '$2,098,564' )
 
     df = pd.read_csv("SDK_data/Superchain Transactions.csv")
 
